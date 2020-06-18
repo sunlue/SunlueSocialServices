@@ -1,0 +1,23 @@
+{
+  "name": "SunlueSocialServices",
+  "version": "1.0.0",
+  "description": "My super-excellent project",
+  "author": "e",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.3.6",
+    "iview": "^3.1.5",
+    "js-cookie": "^2.2.1",
+    "nuxt": "^2.0.0"
+  },
+  "devDependencies": {
+    "less": "^3.11.2",
+    "less-loader": "^6.1.0"
+  }
+}
