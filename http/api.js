@@ -16,20 +16,11 @@ export default function $axios(options,opt={}) {
       transformResponse: [function (data) {
       }]
     })
-    // request 拦截器 带上token等，设置请求头
+
     instance.interceptors.request.use(
       config => {
 
-
-        // let token = Cookies.get('markToken') || '';
-        // //console.log(token)
-        // if(token!=undefined || token!=''){
-        //   config.data.access_token=token
-        // }
-
-
-
-        // 3. 根据请求方法，序列化传来的参数，根据后端需求是否序列化
+        // 根据请求方法，序列化传来的参数，根据后端需求是否序列化
         if (config.method === 'post') {
           if (config.data.__proto__ === FormData.prototype
             || config.url.endsWith('path')
@@ -49,7 +40,6 @@ export default function $axios(options,opt={}) {
 
         console.log(error)
         // 请求错误时
-        //console.log('request:', error)
         // 1. 判断请求超时
         if (error.code === 'ECONNABORTED' && error.message.indexOf('timeout') !== -1) {
           //console.log('timeout请求超时')
@@ -84,6 +74,7 @@ export default function $axios(options,opt={}) {
         switch (data.code) {
           case 400:
             //参数传递错误的返回
+
             break;
           case 0:
             //重新登录
@@ -101,11 +92,13 @@ export default function $axios(options,opt={}) {
         if (err && err.response) {
           switch (err.response.status) {
             case 400:
-              err.message = '请求错误'
+              // err.message = '请求错误'
+              err({ statusCode: 400, message: '请求错误' })
               break
 
             case 401:
-              err.message = '未授权，请登录'
+              // err.message = '未授权，请登录'
+              err({ statusCode: 401, message: '未授权，请登录' })
               break
 
             case 403:
@@ -113,7 +106,8 @@ export default function $axios(options,opt={}) {
               break
 
             case 404:
-              err.message = `请求地址出错: ${err.response.config.url}`
+              // err.message = `请求地址出错: ${err.response.config.url}`
+              err.message = `请求地址出错`
               break
 
             case 408:

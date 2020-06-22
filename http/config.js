@@ -1,7 +1,6 @@
 export default {
   method: 'get',
   // 基础url前缀
-  //baseURL: 'http://icms.u.com/',
    baseURL: 'http://xxxxx/',
   // 请求头信息
   headers: {

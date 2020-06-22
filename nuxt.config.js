@@ -19,20 +19,21 @@ export default {
   /*
   ** Customize the progress-bar color
   */
-  loading: { color: '#fff' },
+  loading: { color: '#3B8070' },
   /*
   ** Global CSS
   */
   css: [
-    'iview/dist/styles/iview.css',
-    '@/assets/css/common.less',
+    'view-design/dist/styles/iview.css',
+    '@/assets/common/css/common.less',
   ],
   /*
   ** Plugins to load before mounting the App
   */
   plugins: [
     '@/plugins/iview',
-    '~/plugins/api.js'
+    '~/plugins/api.js',
+    '~/plugins/route.js'
   ],
   /*
   ** Nuxt.js dev-modules

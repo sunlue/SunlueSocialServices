@@ -1,20 +1,22 @@
 <template>
   <div class="navbar">
     <a class="navbar-brand" href="#">
-      <img src="~/assets/icon/logoRed.png" width="294" height="54" />
+      <img src="~/assets/common/icon/logoRed.png" width="294" height="54" />
     </a>
-    <Menu mode="horizontal" :theme="theme1" active-key="1">
-      <Menu-item v-for="(item,index) in menulist" :key="index+1" :name="item.name">
+
+    <Menu mode="horizontal" theme="light" active-name="1">
+      <MenuItem v-for="(item,index) in menulist" :name="index+1">
         {{item.text}}
-      </Menu-item>
+      </MenuItem>
     </Menu>
+
     <div class="login-btn">
       <a href="/login">
         登录 / 注册
       </a>
     </div>
-  </div>
 
+  </div>
 </template>
 <script>
   export default {

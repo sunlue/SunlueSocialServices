@@ -72,27 +72,27 @@
           background-repeat: no-repeat;
         }
         .iconapp{
-          background-image:url(../assets/icon/app.png);
+          background-image:url(../assets/common/icon/app.png);
           &:hover{
-            background-image:url(../assets/icon/app_cur.png);
+            background-image:url(../assets/common/icon/app_cur.png);
           }
         }
         .iconweixin{
-          background-image:url(../assets/icon/weixin.png);
+          background-image:url(../assets/common/icon/weixin.png);
           &:hover{
-            background-image:url(../assets/icon/weixin_cur.png);
+            background-image:url(../assets/common/icon/weixin_cur.png);
           }
         }
         .iconqq{
-          background-image:url(../assets/icon/qq.png);
+          background-image:url(../assets/common/icon/qq.png);
           &:hover{
-            background-image:url(../assets/icon/qq_cur.png);
+            background-image:url(../assets/common/icon/qq_cur.png);
           }
         }
         .iconfenxiang{
-          background-image:url(../assets/icon/fenxiang.png);
+          background-image:url(../assets/common/icon/fenxiang.png);
           &:hover{
-            background-image:url(../assets/icon/fenxang_cur.png);
+            background-image:url(../assets/common/icon/fenxang_cur.png);
           }
         }
       }
